@@ -1,12 +1,11 @@
 from . import models
-import requests
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .email_service import EmailValidationService
-
-import os
 from dotenv import load_dotenv
 
+import os
+import requests
 
 @api_view(['POST'])
 def verify_email(request):
